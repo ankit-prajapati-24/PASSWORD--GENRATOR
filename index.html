@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container  flex justify-center w-[100vw] h-[100vh] items-center" style="background-image: linear-gradient(45deg,blue,rgb(204, 57, 204));">
+      <div class="flex flex-col justify-between   h-[450px] w-[350px]" >
+               
+        <h1 class="text-center font-bold text-3xl text-white">Password Genrator</h1>
+         
+        <div class="display-container h-16 bg-black flex flex-row justify-between items-center px-4 rounded-xl" class=" h-[50px] w-full border inl">
+             
+          <input readonly placeholder="Password" class="display w-[80%] text-yellow-400 font-bold bg-black" data-passwordDisplay>
+
+          <button data-copy class="relative">
+               <span data-copyMsg class="copykit">Copeid</span>
+               <img src="https://static.vecteezy.com/system/resources/previews/000/420/609/original/copy-icon-vector-illustration.jpg" class=" rounded-full copybtn cbtn" alt="" width="30" height="30" >
+          </button>
+          
+
+
+        </div>
+     
+        <div class="input-container text-white bg-black p-6 space-y-2 rounded-xl">
+
+           <!-- Password lenght  -->
+
+             <div class="lengh-container flex flex-row justify-between relative" >
+               <p class="text-lg">Password Lenght</p>
+               <p data-lenghtNumber class="text-yellow-100 font-bold relative">0</p>
+             </div>
+
+             <!-- slider -->
+              
+             <input  type="range" min="1" max="20" class="slider" step="1" data-lenghSlider>
+
+
+              <!-- checkbox -->
+
+              <div class="check">
+               <input type="checkbox" id="uppercase">
+               <label for="uppercase" > Include Upperacase Letter</label>
+              </div>
+
+              
+              <div class="check">
+               <input type="checkbox" id="lowercase">
+               <label for="lowercase"> Include Lowercase Letter</label>
+              </div>
+              <!-- <h1 style="background-color: ;"></h1> -->
+
+              
+              <div class="check">
+               <input type="checkbox" id="number">
+               <label for="number"> Include Number</label>
+              </div>
+
+
+              
+              <div class="check">
+               <input type="checkbox" id="symbol">
+               <label for="symbol"> Include Symbol </label>
+              </div>
+
+
+              <!-- strenght section  -->
+
+              <div class="strenght-container flex justify-between">
+               
+               <p class="font-bold text-lg">Strength</p>
+               <div data-indicator class="h-5 w-5 rounded-full shadow-xl shadow-inherit "></div>
+
+              </div>
+             
+              <!-- Genrator-password - button  -->
+
+              <button class="genrateButton bg-purple-800 text-lg font-bold text-white-600 border-b-4 border-cyan-300 w-full h-10 ">Genrator Password</button>
+
+
+       </div>
+      </div>
+        <!-- <link rel="stylesheet" href="index.js"> -->
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
